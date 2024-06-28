@@ -141,11 +141,18 @@ type ResponseData = {
 }
  
 export default async function handler(
-  req: string,
+  req: NextApiRequest,
   res: NextApiResponse<ResponseData>
 ) {
 try {
-  const albumData = await getAlbum(req)
+  const {param} = req.query
+  if(!param || typeof param !== 'string'){
+    res.status(400).json({message: 'Invalid parameter or missing write'})
+    return
+  }
+
+  const albumData = await getAlbum(param)
+  
   res.status(200).json({ message: albumData })
   return albumData
 } catch (error) {

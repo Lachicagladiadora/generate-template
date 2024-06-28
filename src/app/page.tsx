@@ -1,13 +1,13 @@
 "use client";
 
-import { useState } from "react";
+import { FormEvent, useState } from "react";
 
 export default function Home() {
   const [searchUrl, setSearchUrl] = useState("");
   const [template, setTemplate] = useState("");
 
-  const getData = async () => {
-    const data = await fetch("http://localhost:3000/api/hello", {
+  const getData = async (url: string) => {
+    const data = await fetch(`http://localhost:3000/api/hello?param=${url}`, {
       method: "GET",
     });
     console.log({ data });
@@ -17,11 +17,20 @@ export default function Home() {
     console.log({ res });
     setTemplate(res);
   };
-  getData();
+
+  const onSearch = (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    getData(searchUrl);
+    console.log("onSearch");
+  };
 
   return (
     <main className="flex min-h-screen flex-col items-center justify-evenly p-242345678">
-      <form action="" className="flex gap-4 items-center justify-center">
+      <form
+        action=""
+        className="flex gap-4 items-center justify-center"
+        onSubmit={(e) => onSearch(e)}
+      >
         <input
           type="url"
           name=""
@@ -30,7 +39,10 @@ export default function Home() {
           onChange={(e) => setSearchUrl(e.target.value)}
           className="text-black"
         />
-        <button className="hover:border hover:border-violet-400 p-2 rounded-lg">
+        <button
+          className="hover:border hover:border-violet-400 p-2 rounded-lg"
+          onClick={() => console.log("search")}
+        >
           Search
         </button>
       </form>
