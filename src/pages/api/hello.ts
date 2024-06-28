@@ -100,13 +100,13 @@ const getQueryParameter = (url: string, queryParameter: string): string => {
 };
 
 const getAlbum = async (albumUrl:string) => {
-  if (!ALBUM_URL) throw Error("Error: Album url is empty!");
+  if (!albumUrl) throw Error("Error: Album url is empty!");
 
   const browser = await puppeteer.launch();
   const page = await browser.newPage();
   await page.setViewport({ width: 1080, height: 1024 });
 
-  await page.goto(ALBUM_URL);
+  await page.goto(albumUrl);
   console.log("0/n");
   const { songsName, albumTitle, albumCover, albumYear } = await getAlbumData(
     page

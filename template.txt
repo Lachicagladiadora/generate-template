@@ -1,18 +1,37 @@
 
 <AlbumMusic
-    title="Solo"
-    thumbnail="https://coverartarchive.org/release/de2c9c1d-62e6-40f3-b55e-56389992777a/12205707821.jpg"
-    year="2007-02-22"
+    title="永遠市 (完全生産限定盤)"
+    
+    year="2023-10-25"
     songs={[
-			{"title":"Nueva York","youtubeId":"QocnYry9xMQ"},
-			{"title":"Sin poderte hablar","youtubeId":"u5rEC9qlGks"},
-			{"title":"Chinacubana","youtubeId":"hqJayni4mTU"},
-			{"title":"Señora","youtubeId":"PXhWzzxeh6Q"},
-			{"title":"Urubatan","youtubeId":"hqJayni4mTU"},
-			{"title":"Juancito","youtubeId":"AsdVG2W3VcM"},
-			{"title":"Colonizaciones","youtubeId":"hqJayni4mTU"},
-			{"title":"Mentiras tuyas","youtubeId":"pcoJ_3q2wr0"},
-			{"title":"Julia","youtubeId":"hqJayni4mTU"},
-			{"title":"Tú eres tú","youtubeId":"G5WP994zDX8"},
+			{"title":"インヒューマンエンパシー","youtubeId":"7g9I5Li5Gpg"},
+			{"title":"下を向いて歩こう","youtubeId":"EZJuWCSMTg4"},
+			{"title":"アンチノミー","youtubeId":"01-OPHjwDLU"},
+			{"title":"ごめんねオデッセイ","youtubeId":"tn-fJxLtpNw"},
+			{"title":"君はまだ夏を知らない","youtubeId":"WcEZKnjvmvc"},
+			{"title":"自由に向かって逃げろ","youtubeId":""},
+			{"title":"スワイプ","youtubeId":"-vvnq1vm0X0"},
+			{"title":"俯きヶ丘","youtubeId":"WcEZKnjvmvc"},
+			{"title":"カシオピア係留所","youtubeId":"pTwSEgflLq0"},
+			{"title":"超新星","youtubeId":"WcEZKnjvmvc"},
+			{"title":"クレプトマニア","youtubeId":""},
+			{"title":"ディザスター","youtubeId":"ufN9uvnYb7Q"},
+			{"title":"まっさら","youtubeId":"2WdAU95a-Ys"},
+			{"title":"ジュブナイル","youtubeId":"7g9I5Li5Gpg"},
+			{"title":"たられば","youtubeId":"WcEZKnjvmvc"},
+			{"title":"隅田川","youtubeId":"7g9I5Li5Gpg"},
+			{"title":"ロストボーイズ","youtubeId":"WcEZKnjvmvc"},
+			{"title":"リビングデッド","youtubeId":"WcEZKnjvmvc"},
+			{"title":"僕が死のうと思ったのは","youtubeId":"WcEZKnjvmvc"},
+			{"title":"季節は次々死んでいく","youtubeId":"WcEZKnjvmvc"},
+			{"title":"カシオピア係留所","youtubeId":"pTwSEgflLq0"},
+			{"title":"そういう人になりたいぜ","youtubeId":"WcEZKnjvmvc"},
+			{"title":"ひろ","youtubeId":"WcEZKnjvmvc"},
+			{"title":"帰ってこいよ","youtubeId":"WcEZKnjvmvc"},
+			{"title":"さくら","youtubeId":"WcEZKnjvmvc"},
+			{"title":"馬鹿騒ぎはもう終わり","youtubeId":"WcEZKnjvmvc"},
+			{"title":"スワイプ","youtubeId":"-vvnq1vm0X0"},
+			{"title":"夕立旅立ち","youtubeId":"WcEZKnjvmvc"},
+			{"title":"アンチノミー","youtubeId":"01-OPHjwDLU"},
 		]}
 />

@@ -7,6 +7,7 @@ export default function Home() {
   const [template, setTemplate] = useState("");
 
   const getData = async (url: string) => {
+    setTemplate("... Loading");
     const data = await fetch(`http://localhost:3000/api/hello?param=${url}`, {
       method: "GET",
     });
@@ -22,6 +23,16 @@ export default function Home() {
     e.preventDefault();
     getData(searchUrl);
     console.log("onSearch");
+    setSearchUrl("");
+  };
+
+  const onCopy = async () => {
+    try {
+      await navigator.clipboard.writeText(template);
+      console.log("succes");
+    } catch (error) {
+      console.error({ error });
+    }
   };
 
   return (
@@ -46,7 +57,13 @@ export default function Home() {
           Search
         </button>
       </form>
-      <pre className="min-w-[300px] min-h-[400px] border border-red-500 rounded-md p-8 text-rose-200">
+      <pre className="min-w-[300px] min-h-[400px] max-h-[50vh] border border-red-500 rounded-md p-8 text-rose-200 relative overflow-auto">
+        <button
+          className="absolute -top-0 -left-0 p-2 rounded-lg border border-green-400 bg-green-950"
+          onClick={onCopy}
+        >
+          copy
+        </button>
         {template}
       </pre>
     </main>
