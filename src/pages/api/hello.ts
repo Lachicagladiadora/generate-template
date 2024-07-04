@@ -5,8 +5,6 @@ import puppeteer, { Page } from "puppeteer";
 import fs from "fs";
 
 const YOUTUBE_SEARCH_URL = "https://www.youtube.com/results";
-const ALBUM_URL =
-  "https://musicbrainz.org/release/de2c9c1d-62e6-40f3-b55e-56389992777a"; // 👈 fill this
 
 type AlbumData = {
   albumTitle: string;
@@ -120,7 +118,7 @@ const getAlbum = async (albumUrl:string) => {
     const searchUrl = getUrl(YOUTUBE_SEARCH_URL, searchQuery);
     console.log("11 ->", searchUrl);
     await page.goto(searchUrl);
-    await wait();
+    await wait(); // wait until render the links
     console.log("12");
     const link = await getSongLink(page);
     console.log("13", link);
@@ -154,7 +152,6 @@ try {
   const albumData = await getAlbum(param)
   
   res.status(200).json({ message: albumData })
-  return albumData
 } catch (error) {
   res.status(500).json({message: 'an error ocurred, try again later'})
 }
